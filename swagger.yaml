@@ -2,40 +2,50 @@ openapi: 3.0.3
 info:
   title: Civic Pass Customer API
   description: |-
-    The APIs described bellow enable Civic customers to issue and manage the Civic Pass for their dApp. To learn more about Civic Passes and their fundamentals please refer to the main [documentation](https://docs.civic.com/).
+    The APIs described bellow enable Civic customers to issue and manage the Civic Pass for their dApp. To learn more about Civic Passes and their fundamentals, please refer to the main [documentation](https://docs.civic.com/).
     
     # Terminology
     
-    In the Customer API, the term `chain` refers to a blockchain programming model and the term `chainNetwork` to a network of the chain. For example, a "Layer 2" Ethereum network like Polygon is represented as `/pass/ethereum/polygon`.
+    In the Customer API, the term `chain` refers to a blockchain programming model and the term `chainNetwork` to a network of that chain. For example, a "Layer 2" Ethereum network like Polygon is represented as `/pass/ethereum/polygon`.
+    
+    # Supported Chain
+    
+    The Customer API supports the following chains and chain networks:
+    - `solana/mainnet`
+    - `solana/devnet`
+    - `ethereum/mainnet`
+    - `ethereum/goerli`
+    - `ethereum/polygon`
+    
+    If your blockchain of choice is not listed above, feel free to reach out to us for more info on when support for your chain is planned.
     
     # Authentication
-    Authentication follows the [OAuth standard](https://oauth.net/2/). We recommend using one of the available [OAuth libraries](https://oauth.net/code/) for your platform.
+    Authentication follows the [OAuth standard](https://oauth.net/2/). The Civic authentication endpoint is `https://auth.civic.com/oauth/token`. The `grant_type` to request is  `client_credentials`.
+    
+    We recommend using one of the available [OAuth libraries](https://oauth.net/code/) for your platform.
     
     # Try it out!
-    You can try out Civic Pass Customer API by using the following demo credentials to generate an OAuth token:
+    You can try out the Civic Pass Customer API by using the following demo credentials to generate an auth token:
     - `client_id: j5kwZ68j4bM8fdPAYKu7DlGQGr37eNPs`,
     - `client_secret: S1qSiacDUDPRVfxiSvwsRASxE0fH47U60eYeNYIt4JKSVSsgo2yy0n6V-Uz1IYBK`
     
-    These credentials only work on the development networks, i.e.
-    - chain: `solana`, network: `devnet`
-    - chain: `ethereum`, network: `goerli`
+    *Note: The demo credentials only work for the development networks:*
+    - `solana/devnet`
+    - `ethereum/goerli`
 
   termsOfService: https://www.civic.com/legal/terms-of-service-civic-pass-v1/
   contact:
-    name: Civic
-    url: https://docs.civic.com
     email: devsupportp@civic.com
-  version: 0.1.0
+  version: 1.0.0
 servers:
   - url: https://api.civic.com/partner
-  - url: https://dev.api.civic.com/partner-dev
 paths:
   /pass:
     post:
       tags:
         - pass
       summary: List all Civic Passes
-      description: Returns a list of filtered Civic Passes 
+      description: Returns a list of all Civic Passes you have issued. Optionally filtered by the state.
       operationId: listPass
       requestBody:
         content:
@@ -261,6 +271,7 @@ components:
         - ACTIVE
         - REVOKED
         - FROZEN
+        - REQUESTED
         - REJECTED
     UpdateState:
       type: object
@@ -362,5 +373,5 @@ components:
       type: oauth2
       flows:
         clientCredentials:
-          tokenUrl: https://dev-x4psl5y0zb6ue6dl.us.auth0.com/oauth/token
+          tokenUrl: https://auth.civic.com/oauth/token
           scopes: {}
