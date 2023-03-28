@@ -279,7 +279,7 @@ components:
         - mainnet-beta
         - goerli
         - matic
-        - xdc
+        - xdcMainnet
         - xdcApothem
     Chain:
       type: string
