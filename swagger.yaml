@@ -16,6 +16,8 @@ info:
     - `ethereum/homestead`
     - `ethereum/goerli`
     - `ethereum/matic`
+    - `ethereum/xdc`
+    - `ethereum/xdcApothem`
     
     If your blockchain of choice is not listed above, feel free to reach out to us for more info on when support for your chain is planned.
     
@@ -29,7 +31,7 @@ info:
     - `client_id: j5kwZ68j4bM8fdPAYKu7DlGQGr37eNPs`,
     - `client_secret: S1qSiacDUDPRVfxiSvwsRASxE0fH47U60eYeNYIt4JKSVSsgo2yy0n6V-Uz1IYBK`
     
-    The demo credentials only work for the development networks:`solana/devnet` & `ethereum/goerli`. Also, please keep in mind that since these are shared credentials, i.e. others have access to the same Civic Passes and can for example freeze them.
+    The demo credentials only work for the development networks:`solana/devnet`, `ethereum/goerli`, `ethereum/xdcApothem`. Also, please keep in mind that since these are shared credentials, i.e. others have access to the same Civic Passes and can for example freeze them.
 
   termsOfService: https://www.civic.com/legal/terms-of-service-civic-pass-v1/
   contact:
@@ -277,6 +279,8 @@ components:
         - mainnet-beta
         - goerli
         - matic
+        - xdc
+        - xdcApothem
     Chain:
       type: string
       description: The chain type
