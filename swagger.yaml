@@ -6,7 +6,7 @@ info:
     
     # Terminology
     
-    In the Customer API, the term `chain` refers to a blockchain programming model and the term `chainNetwork` to a network of that chain. For example, a "Layer 2" Ethereum network like Polygon is represented as `/pass/ethereum/polygon`.
+    In the Customer API, the term `chain` refers to a blockchain programming model and the term `chainNetwork` to a network of that chain. For example, a "Layer 2" Ethereum network like polygonMainnet is represented as `/pass/ethereum/polygonMainnet`.
     
     # Supported Chains
     
@@ -15,7 +15,7 @@ info:
     - `solana/devnet`
     - `ethereum/homestead`
     - `ethereum/goerli`
-    - `ethereum/polygon`
+    - `ethereum/polygonMainnet`
     - `ethereum/polygonMumbai`
     - `ethereum/xdc`
     - `ethereum/xdcApothem`
@@ -110,7 +110,7 @@ paths:
           description: The blockchain network
           required: true
           explode: true
-          example: polygon
+          example: polygonMainnet
           schema:
             $ref: '#/components/schemas/ChainNetwork'
       requestBody:
@@ -162,7 +162,7 @@ paths:
           description: The blockchain network
           required: true
           explode: true
-          example: polygon
+          example: polygonMainnet
           schema:
             $ref: '#/components/schemas/ChainNetwork'
       responses:
@@ -204,7 +204,7 @@ paths:
           description: The blockchain network
           required: true
           explode: true
-          example: polygon
+          example: polygonMainnet
           schema:
             $ref: '#/components/schemas/ChainNetwork'
       requestBody:
@@ -251,7 +251,7 @@ paths:
           description: The blockchain network
           required: true
           explode: true
-          example: polygon
+          example: polygonMainnet
           schema:
             $ref: '#/components/schemas/ChainNetwork'
       responses:
@@ -281,7 +281,7 @@ components:
         - homestead
         - mainnet-beta
         - goerli
-        - polygon
+        - polygonMainnet
         - polygonMumbai
         - xdcMainnet
         - xdcApothem
