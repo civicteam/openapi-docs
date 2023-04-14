@@ -95,7 +95,11 @@ paths:
       tags:
         - pass
       summary: Issue a Civic Pass
-      description: Issue a Civic Pass to a user's wallet. This action is asynchronous, i.e. it does not wait for the Civic Pass to be confirmed on-chain before returning.
+      description:
+        Issue a Civic Pass to a user's wallet. This action is asynchronous, i.e. it does not wait for the Civic Pass to be confirmed on-chain before returning.
+        
+        
+        In the unlikely case that the issuance fails to confirm on-chain, for example with a `RETRIES_EXHAUSTED` event, clients can simply retry the request. Retrying will be protocolled in the events as expected, e.g. a new `TOKEN_ISSUED_INITIATED` and `TOKEN_ISSUED`, event will be appended.
       operationId: issuePass
       parameters:
         - name: chain
@@ -125,7 +129,6 @@ paths:
           content:
             application/json:
               schema:
-                type: object
                 $ref: '#/components/schemas/PassResponse'
         '401':
           description: Unauthorized
