@@ -182,7 +182,13 @@ paths:
       tags:
         - pass
       summary: Update a Civic Pass
-      description: Updates either the status or the expiration timestamp of a Civic Pass. This action is asynchronous, i.e. it does not wait for updates to be confirmed on-chain before returning. To immediately expire a pass, for example to force a user to refresh, set an expiration data a couple of second in the future.
+      description: Updates either the status or the expiration timestamp of a Civic Pass. This action is asynchronous, i.e. it does not wait for updates to be confirmed on-chain before returning.
+        
+        
+        The expiration time is required to be a future date. I.e. to "immediately" expire a pass, set an expiration data a couple of minutes in the future.
+        
+        
+        Additionally, patching the status is **not** idempodent. I.e. trying to patch an ACTIVE Civic Pass, with the status ACTIVE, will result in an error.
       operationId: patchPass
       parameters:
         - name: chain
