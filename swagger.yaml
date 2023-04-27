@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: Civic Pass API
   description: |-
-    The APIs described bellow enable Civic customers to issue and manage the Civic Pass for their dApp. To learn more about Civic Passes and their fundamentals, please refer to the main [documentation](https://docs.civic.com/).
+    The APIs described below enable Civic customers to issue and manage the Civic Pass for their dApp. To learn more about Civic Passes and their fundamentals, please refer to the main [documentation](https://docs.civic.com/).
     
     # Terminology
     
