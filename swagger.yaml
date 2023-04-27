@@ -1,16 +1,16 @@
 openapi: 3.0.3
 info:
-  title: Civic Pass Customer API
+  title: Civic Pass API
   description: |-
     The APIs described bellow enable Civic customers to issue and manage the Civic Pass for their dApp. To learn more about Civic Passes and their fundamentals, please refer to the main [documentation](https://docs.civic.com/).
     
     # Terminology
     
-    In the Customer API, the term `chain` refers to a blockchain programming model and the term `chainNetwork` to a network of that chain. For example, a "Layer 2" Ethereum network like polygonMainnet is represented as `/pass/ethereum/polygonMainnet`.
+    In the Civic Pass API, the term `chain` refers to a blockchain programming model and the term `chainNetwork` to a network of that chain. For example, a "Layer 2" Ethereum network like polygonMainnet is represented as `/pass/ethereum/polygonMainnet`.
     
     # Supported Chains
     
-    The Customer API supports the following chains and chain networks:
+    The Civic Pass API supports the following chains and chain networks:
     - `solana/mainnet-beta`
     - `solana/devnet`
     - `ethereum/homestead`
@@ -30,7 +30,7 @@ info:
     To manage API authentication we recommend using one of the available [OAuth libraries](https://oauth.net/code/) for your platform.
     
     # Try it out!
-    You can try out the Civic Pass Customer API by using the following demo credentials to generate an auth token:
+    You can try out the Civic Pass API by using the following demo credentials to generate an auth token:
     - `client_id: j5kwZ68j4bM8fdPAYKu7DlGQGr37eNPs`,
     - `client_secret: S1qSiacDUDPRVfxiSvwsRASxE0fH47U60eYeNYIt4JKSVSsgo2yy0n6V-Uz1IYBK`
     
@@ -38,7 +38,7 @@ info:
 
   termsOfService: https://www.civic.com/legal/terms-of-service-civic-pass-v1/
   contact:
-    email: devsupportp@civic.com
+    email: devsupport@civic.com
   version: 1.0.0
 servers:
   - url: https://api.civic.com/partner
