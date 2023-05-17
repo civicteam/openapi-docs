@@ -270,9 +270,64 @@ paths:
         - pass_auth:
             - write:token
             - read:token
+
+  /account/gatekeeperNetwork:
+    get:
+      tags:
+        - gatekeeperNetwork
+      summary: Retrieve a list of all your organization's custom pass types ( gatekeeper networks ).
+      description: Retrieve the full list of all custom pass types ( also called gatekeeper networks ) managed by your organization
+      operationId: listGatekeeperNetworks
+      responses:
+        '200':
+          description: The list of Gatekeeper Networks associated with your organization.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  records:
+                    type: array
+                    items:
+                      type: object
+                      $ref: '#/components/schemas/GatekeeperNetworkResponse'
+      security:
+        - pass_auth:
+            - write:token
+            - read:token
+  /account/gatekeeperNetwork/{id}:
+    get:
+      tags:
+        - gatekeeperNetwork
+      summary: Retrieve a specific pass type ( gatekeeper network ) by id.
+      description: Retrieve a specific pass type ( gatekeeper network ) by id.
+      operationId: getGatekeeperNetwork
+      parameters:
+        - name: id
+          in: path
+          description: The address of the gatekeeper network you want to view
+          schema:
+            type: string
+          required: true
+          example: tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf
+      responses:
+        '200':
+          description: The configuration of the requested gatekeeper network
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GatekeeperNetworkResponse'
+      security:
+        - pass_auth:
+            - write:token
+            - read:token
+
+
 tags:
   - name: pass
     description: Issue and manage Civic Passes
+  - name: gatekeeperNetwork
+    description: View and manage settings for custom pass types
 components:
   schemas:
     Wallet:
@@ -406,6 +461,25 @@ components:
         - id
         - onChainState
         - state
+    GatekeeperNetworkResponse:
+      type: object
+      properties:
+        id:
+          description: The address of this [Gatekeeper Network](https://docs.civic.com/civic-pass/integrate/turnkey-integration/selecting-a-pass).
+          type: string
+          example: "tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf"
+        partner:
+          description: Your Civic partner id
+          type: string
+          example: "org_i9vWjKV39gluxfmU"
+        public:
+          description: Whether this gatekeeper network is viewable publicly or not
+          type: boolean
+          example: true
+      required:
+        - id
+        - partner
+        - public
   securitySchemes:
     pass_auth:
       type: oauth2
