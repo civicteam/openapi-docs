@@ -14,26 +14,38 @@ info:
     - `solana/mainnet-beta`
     - `solana/devnet`
     - `ethereum/homestead`
+    - `ethereum/arbitrumGoerli`
+    - `ethereum/arbitrumMainnet`
+    - `ethereum/arbitrumSepolia`
     - `ethereum/goerli`
+    - `ethereum/avalancheCChain`
+    - `ethereum/avalancheCChainFuji`
+    - `ethereum/baseSepolia`
+    - `ethereum/baseMainnet`
+    - `ethereum/fantomMainnet`
+    - `ethereum/fantomTestnet`
+    - `ethereum/mainnet`
+    - `ethereum/optimismGoerli`
+    - `ethereum/optimismMainnet`
     - `ethereum/polygonMainnet`
     - `ethereum/polygonMumbai`
-    - `ethereum/xdc`
+    - `ethereum/polygonZKEVM`
+    - `ethereum/polygonZKEVMTestnet`
+    - `ethereum/xdcMainnet`
     - `ethereum/xdcApothem`
-    - `ethereum/arbitrumMainnet`
-    - `ethereum/arbitrumGoerli`
-    
-    If your blockchain of choice is not listed above, feel free to reach out to us for more info on when support for your chain is planned.
+
+  If your blockchain of choice is not listed above, feel free to reach out to us for more info on when support for your chain is planned.
     
     # Authentication
     Authentication follows the [OAuth standard](https://oauth.net/2/). The Civic authentication endpoint is `https://auth.civic.com/oauth/token`. The `grant_type` to request is  `client_credentials`.
     
     To manage API authentication we recommend using one of the available [OAuth libraries](https://oauth.net/code/) for your platform.
-    
+
     # Try it out!
     You can try out the Civic Pass API by using the following demo credentials to generate an auth token:
     - `client_id: j5kwZ68j4bM8fdPAYKu7DlGQGr37eNPs`,
     - `client_secret: S1qSiacDUDPRVfxiSvwsRASxE0fH47U60eYeNYIt4JKSVSsgo2yy0n6V-Uz1IYBK`
-    
+
     The demo credentials only work for the development networks:`solana/devnet`, `ethereum/goerli`, `ethereum/xdcApothem`, `ethereum/arbitrumGoerli`. Also, please keep in mind that since these are shared credentials, i.e. others have access to the same Civic Passes and can for example freeze them.
 
   termsOfService: https://www.civic.com/legal/terms-of-service-civic-pass-v1/
