@@ -6,17 +6,35 @@ info:
 
     # Terminology
 
-    In the Customer API, the term `chain` refers to a blockchain programming model and the term `chainNetwork` to a network of that chain. For example, a "Layer 2" Ethereum network like Polygon is represented as `/pass/ethereum/matic`.
+    In the Customer API, the term `chain` refers to a blockchain programming model and the term `chainNetwork` to a network of that chain. For example, a "Layer 2" Ethereum network like Polygon is represented as `/pass/ethereum/polygonMainnet`.
 
     # Supported Chains
 
     The Customer API supports the following chains and chain networks:
-    - `solana/mainnet-beta`
-    - `solana/devnet`
-    - `ethereum/homestead`
-    - `ethereum/sepolia`
-    - `ethereum/goerli`
-    - `ethereum/matic`
+- `solana:mainnet-beta`
+- `solana:devnet`
+- `ethereum:mainnet`
+- `ethereum:sepolia`
+- `ethereum:polygonAmoy`
+- `ethereum:polygonMainnet`
+- `ethereum:polygonZKEVM`
+- `ethereum:polygonZKEVMTestnet`
+- `ethereum:optimismSepolia`
+- `ethereum:optimismMainnet`
+- `ethereum:arbitrumSepolia`
+- `ethereum:arbitrumMainnet`
+- `ethereum:avalancheCChain`
+- `ethereum:avalancheCChainFuji`
+- `ethereum:xdcMainnet`
+- `ethereum:xdcApothem`
+- `ethereum:fantomMainnet`
+- `ethereum:fantomTestnet`
+- `ethereum:baseSepolia`
+- `ethereum:baseMainnet`
+- `ethereum:bscMainnet`
+- `ethereum:bscTestnet`
+- `ethereum:xlayerMainnet`
+- `ethereum:xlayerTestnet`
 
     If your blockchain of choice is not listed above, feel free to reach out to us for more info on when support for your chain is planned.
 
@@ -106,7 +124,7 @@ paths:
           description: The blockchain network
           required: true
           explode: true
-          example: matic
+          example: sepolia
           schema:
             $ref: "#/components/schemas/ChainNetwork"
       requestBody:
@@ -158,7 +176,7 @@ paths:
           description: The blockchain network
           required: true
           explode: true
-          example: matic
+          example: sepolia
           schema:
             $ref: "#/components/schemas/ChainNetwork"
       responses:
@@ -200,7 +218,7 @@ paths:
           description: The blockchain network
           required: true
           explode: true
-          example: matic
+          example: sepolia
           schema:
             $ref: "#/components/schemas/ChainNetwork"
       requestBody:
@@ -247,7 +265,7 @@ paths:
           description: The blockchain network
           required: true
           explode: true
-          example: matic
+          example: sepolia
           schema:
             $ref: "#/components/schemas/ChainNetwork"
       responses:
@@ -338,11 +356,30 @@ components:
       type: string
       description: The chain network
       enum:
-        - devnet
-        - homestead
         - mainnet-beta
-        - goerli
-        - matic
+        - devnet
+        - mainnet
+        - sepolia
+        - polygonAmoy
+        - polygonMainnet
+        - polygonZKEVM
+        - polygonZKEVMTestnet
+        - optimismSepolia
+        - optimismMainnet
+        - arbitrumSepolia
+        - arbitrumMainnet
+        - avalancheCChain
+        - avalancheCChainFuji
+        - xdcMainnet
+        - xdcApothem
+        - fantomMainnet
+        - fantomTestnet
+        - baseSepolia
+        - baseMainnet
+        - bscMainnet
+        - bscTestnet
+        - xlayerMainnet
+        - xlayerTestnet
     Chain:
       type: string
       description: The chain type
