@@ -11,30 +11,30 @@ info:
     # Supported Chains
 
     The Customer API supports the following chains and chain networks:
-- `solana:mainnet-beta`
-- `solana:devnet`
-- `ethereum:mainnet`
-- `ethereum:sepolia`
-- `ethereum:polygonAmoy`
-- `ethereum:polygonMainnet`
-- `ethereum:polygonZKEVM`
-- `ethereum:polygonZKEVMTestnet`
-- `ethereum:optimismSepolia`
-- `ethereum:optimismMainnet`
-- `ethereum:arbitrumSepolia`
-- `ethereum:arbitrumMainnet`
-- `ethereum:avalancheCChain`
-- `ethereum:avalancheCChainFuji`
-- `ethereum:xdcMainnet`
-- `ethereum:xdcApothem`
-- `ethereum:fantomMainnet`
-- `ethereum:fantomTestnet`
-- `ethereum:baseSepolia`
-- `ethereum:baseMainnet`
-- `ethereum:bscMainnet`
-- `ethereum:bscTestnet`
-- `ethereum:xlayerMainnet`
-- `ethereum:xlayerTestnet`
+    - `solana:mainnet-beta`
+    - `solana:devnet`
+    - `ethereum:mainnet`
+    - `ethereum:sepolia`
+    - `ethereum:polygonAmoy`
+    - `ethereum:polygonMainnet`
+    - `ethereum:polygonZKEVM`
+    - `ethereum:polygonZKEVMTestnet`
+    - `ethereum:optimismSepolia`
+    - `ethereum:optimismMainnet`
+    - `ethereum:arbitrumSepolia`
+    - `ethereum:arbitrumMainnet`
+    - `ethereum:avalancheCChain`
+    - `ethereum:avalancheCChainFuji`
+    - `ethereum:xdcMainnet`
+    - `ethereum:xdcApothem`
+    - `ethereum:fantomMainnet`
+    - `ethereum:fantomTestnet`
+    - `ethereum:baseSepolia`
+    - `ethereum:baseMainnet`
+    - `ethereum:bscMainnet`
+    - `ethereum:bscTestnet`
+    - `ethereum:xlayerMainnet`
+    - `ethereum:xlayerTestnet`
 
     If your blockchain of choice is not listed above, feel free to reach out to us for more info on when support for your chain is planned.
 
