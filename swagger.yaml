@@ -39,7 +39,7 @@ info:
     If your blockchain of choice is not listed above, feel free to reach out to us for more info on when support for your chain is planned.
 
     # Authentication
-    Authentication follows the [OAuth standard](https://oauth.net/2/). The Civic authentication endpoint is `https://auth.civic.com/oauth/token`. The `grant_type` to request is  `client_credentials`.
+    Authentication follows the [OAuth standard](https://oauth.net/2/). The Civic authentication endpoint is `https://auth0.civic.com/oauth/token`. The `grant_type` to request is  `client_credentials`.
 
     To manage API authentication we recommend using one of the available [OAuth libraries](https://oauth.net/code/) for your platform.
 
@@ -536,5 +536,5 @@ components:
       type: oauth2
       flows:
         clientCredentials:
-          tokenUrl: https://auth.civic.com/oauth/token
+          tokenUrl: https://auth0.civic.com/oauth/token
           scopes: {}
