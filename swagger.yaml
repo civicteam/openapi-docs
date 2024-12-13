@@ -45,10 +45,23 @@ info:
 
     # Try it out!
     You can try out the Civic Pass Customer API by using the following demo credentials to generate an auth token:
-    - `client_id: j5kwZ68j4bM8fdPAYKu7DlGQGr37eNPs`,
-    - `client_secret: S1qSiacDUDPRVfxiSvwsRASxE0fH47U60eYeNYIt4JKSVSsgo2yy0n6V-Uz1IYBK`
+    - `client_id: dtVTGsKUlkPQ8UXKqSskS1HqNI3hERHT`,
+    - `client_secret: 7DT722BjNlXUp8HVaV_ZjHzopq2Tr12doGB8sBYC-vhPo3Eh0HoidLVATFbxmwZ1`
+    Please keep in mind that these are shared credentials, i.e. others have access to the same Civic Passes and can for example freeze them.
 
-    The demo credentials only work for the development networks:`solana/devnet` & `ethereum/goerli`. Also, please keep in mind that since these are shared credentials, i.e. others have access to the same Civic Passes and can for example freeze them.
+    The `gatekeeperNetwork` : `tgnuXXNMDLK8dy7Xm1TdeGyc95MDym4bvAQCwcW21Bf` should be used with these credentials. That is Civic's sandbox pass.
+
+    The demo pass is only supported on testnets. The current list is:
+      - `solana:devnet`
+      - `ethereum:polygonAmoy`
+      - `ethereum:sepolia`
+      - `ethereum:baseSepolia`
+      - `ethereum:arbitrumSepolia`
+      - `ethereum:optimismSepolia`
+      - `ethereum:bscTestnet`
+      - `ethereum:xdcApothem`
+      - `ethereum:xlayerTestnet`
+      - `ethereum:avalancheCChainFuji`
 
   termsOfService: https://www.civic.com/legal/terms-of-service-civic-pass-v1/
   contact:
@@ -73,9 +86,11 @@ paths:
                 limit:
                   type: number
                   default: 20
+                  description: "Number of records to return per page (used together with 'skip' for pagination)"
                 skip:
                   type: number
-                  default: 10
+                  default: 0
+                  description: "Number of records to skip (used together with 'limit' for pagination)"
                 filter:
                   type: object
                   properties:
