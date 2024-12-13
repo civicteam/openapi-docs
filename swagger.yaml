@@ -76,7 +76,7 @@ paths:
       tags:
         - pass
       summary: List Civic Passes
-      description: Returns a list of all Civic Passes you have issued. Optionally filtered by the Civic Pass attributes.
+      description: Returns a list of all Civic Passes you have issued. Optionally filtered by the Civic Pass attributes. A pass may take a few seconds to a few minutes to show up here after issuing, depending on blockchain confirmation times.
       operationId: listPass
       requestBody:
         content:
@@ -100,9 +100,6 @@ paths:
                     walletAddress:
                       type: string
                       example: "4v4PL5bMZXXvQB3mvWPXLvqfJpjJmPRnPrmENnUESQQQ"
-                    issueTimestamp:
-                      type: object
-                      example: { "$gt": 1677588890 }
       responses:
         200:
           description: "OK"
@@ -170,7 +167,7 @@ paths:
       tags:
         - pass
       summary: Retrieve a Civic Pass.
-      description: Retrieve the full details about a Civic Pass you issued, including a log of all events associated with the specific pass.
+      description: Retrieve the full details about a Civic Pass you issued, including a log of all events associated with the specific pass. A pass may take a few seconds to a few minutes to show up here after issuing, depending on blockchain confirmation times.
       operationId: getPass
       parameters:
         - name: chain
