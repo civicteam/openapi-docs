@@ -35,6 +35,10 @@ info:
     - `ethereum:bscTestnet`
     - `ethereum:xlayerMainnet`
     - `ethereum:xlayerTestnet`
+    - `ethereum:unichainMainnet`
+    - `ethereum:unichainSepolia`
+    - `ethereum:sonicMainnet`
+    - `ethereum:sonicTestnet`
 
     If your blockchain of choice is not listed above, feel free to reach out to us for more info on when support for your chain is planned.
 
@@ -63,6 +67,8 @@ info:
       - `ethereum:xdcApothem`
       - `ethereum:xlayerTestnet`
       - `ethereum:avalancheCChainFuji`
+      - `ethereum:unichainSepolia`
+      - `ethereum:sonicTestnet`
 
   termsOfService: https://www.civic.com/legal/terms-of-service-civic-pass-v1/
   contact:
@@ -393,6 +399,10 @@ components:
         - bscTestnet
         - xlayerMainnet
         - xlayerTestnet
+        - unichainMainnet
+        - unichainSepolia
+        - sonicMainnet
+        - sonicTestnet
     Chain:
       type: string
       description: The chain type
